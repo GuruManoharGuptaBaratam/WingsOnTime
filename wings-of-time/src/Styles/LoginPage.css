@@ -1,10 +1,11 @@
-/* Reset default margins */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   
   }
+  
   
   body, html, .login-page {
     height: 100%;
@@ -13,7 +14,7 @@
     position: relative;
   }
   
-  /* Video background */
+  
   #bg-video {
     position: fixed;
     right: 0;
@@ -37,26 +38,25 @@
     overflow: hidden;
   }
   
-  /* Login Container */
+ 
   .login-container {
     width: 100%;
-    max-width: 550px; /* Made it even bigger */
+    max-width: 550px; 
     background: rgba(255, 255, 255, 0.85);
-    padding: 60px 50px; /* More space inside */
+    padding: 60px 50px; 
     border-radius: 20px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     z-index: 1;
   }
-  
-  /* Heading */
+ 
   .login-container h1 {
-    font-size: 40px; /* Big heading */
+    font-size: 40px; 
     font-weight: bold;
     margin-bottom: 40px;
   }
   
-  /* Input Boxes */
+
   .input-box {
     position: relative;
     margin-bottom: 25px;
@@ -64,38 +64,38 @@
   
   .input-box input {
     width: 100%;
-    padding: 18px 50px 18px 50px; /* Thicker padding */
-    font-size: 18px; /* Bigger text inside input */
+    padding: 18px 50px 18px 50px; 
+    font-size: 18px; 
     border-radius: 10px;
     border: 1px solid #ccc;
   }
   
-  /* Icons */
+
   .icon {
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 22px; /* Bigger icons */
+    font-size: 22px;
   }
   
-  /* Show Password */
+  
   .show {
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size: 14px; /* Slightly bigger */
+    font-size: 14px; 
     font-weight: bold;
   }
   
-  /* Divider */
+
   .divider {
     margin: 30px 0;
   }
   
-  /* Buttons */
+  
   .buttons {
     display: flex;
     align-items: center;
@@ -105,8 +105,8 @@
   
   .signup-btn,
   .login-btn {
-    padding: 15px 30px; /* Big buttons */
-    font-size: 18px; /* Bigger text */
+    padding: 15px 30px;
+    font-size: 18px; 
     border: none;
     border-radius: 10px;
     background-color: #3498db;
@@ -122,7 +122,6 @@
     background-color: #2980b9;
   }
   
-  /* OR text */
   .or {
     font-size: 18px;
     font-weight: bold;
