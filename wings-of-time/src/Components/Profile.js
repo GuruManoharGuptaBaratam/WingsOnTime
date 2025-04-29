@@ -25,8 +25,8 @@ export default function ProfileI() {
   return (
 
     <div style={userInfoStyle}>
-        <div style={userIconStyle}></div>
-        <Link to="/Profile" style={{ textDecoration: 'none', color: '#000' }}><span >User 01</span></Link>
+        <Link to="/Profile" style={{ textDecoration: 'none', color: '#000' }}><div style={userIconStyle}></div>
+        <span >User 01</span></Link>
     </div>
     
   )

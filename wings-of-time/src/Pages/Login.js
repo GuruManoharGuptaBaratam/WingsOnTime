@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import '../Styles/LoginPage.css';
-import backgroundVideo from '../Sources/background.mp4';
+import Background from '../Components/Background';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -29,11 +29,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page">
-    <video id="bg-video" autoPlay muted loop playsInline>
-    <source src={backgroundVideo} type="video/mp4"></source>
-    Your browser does not support the video tag.
-    </video>
-
+      <Background/>
       <div className="login-container">
         <h1>Login</h1>
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import backgroundVideo from '../Sources/background.mp4';
 import { Link } from 'react-router-dom';
 import ProfileI from '../Components/Profile.js';
+import Background from '../Components/Background.js';
 
 const GetStarted = () => {
   const containerStyle = {
@@ -12,15 +12,7 @@ const GetStarted = () => {
     fontFamily: 'Courier New, monospace',
   };
 
-  const videoStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    zIndex: -1,
-  };
+  
 
   
   const mainContentStyle = {
@@ -62,11 +54,7 @@ const GetStarted = () => {
 
   return (
     <div style={containerStyle}>
-      <video autoPlay muted loop playsInline style={videoStyle}>
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
+      <Background/>
       <ProfileI/>
 
       <div style={mainContentStyle}>
