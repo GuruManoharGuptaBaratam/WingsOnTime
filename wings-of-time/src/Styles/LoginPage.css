@@ -6,7 +6,6 @@
   
   }
   
-  
   body, html, .login-page {
     height: 100%;
     width: 100%;
@@ -23,8 +22,8 @@
     min-height: 100%;
     z-index: -1;
     object-fit: cover;
-    width: 1512px;
-    height: 982px;
+    width: 1450px;
+    height: 800px;
     
   }
   
