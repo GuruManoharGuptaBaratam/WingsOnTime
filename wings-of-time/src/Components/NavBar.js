@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default function NavBar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,7 +16,7 @@ export default function NavBar() {
 
   const navbar = {
     position: 'absolute',
-    top: '12px',
+    top: '16px',
     left: isMobile ? '12px' : '50%',
     transform: isMobile ? 'none' : 'translateX(-50%)',
     background: 'rgba(255, 255, 255, 0.75)',
@@ -27,19 +28,22 @@ export default function NavBar() {
     borderRadius: '30px',
     width: isMobile ? 'fit-content' : '65%',
     zIndex: 10,
+    fontStyle: "JetBrains Mono",
+    border: "0.5px solid lightBlue"
   };
 
   const navBtn = {
     backgroundColor: 'rgba(175, 219, 255, 0.98)',
-    border: 'none',
     padding: isMobile ? '8px 15px' : '10px 25px',
     fontSize: isMobile ? '14px' : '18px',
     borderRadius: '10px',
     cursor: 'pointer',
-    fontWeight: 'bold',
+    fontWeight: '100',
     letterSpacing: '1px',
     margin: '5px 0',
-    display: isMobile && !menuOpen ? 'none' : 'block',
+    display: isMobile && !menuOpen ? 'none' : 'block',    
+    fontFamily: "JetBrains Mono",
+    border: "0.5px solid lightBlue"
   };
 
   const hamburgerBtn = {
@@ -49,11 +53,16 @@ export default function NavBar() {
     cursor: 'pointer',
     display: isMobile ? 'block' : 'none',
     marginBottom: '10px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: "JetBrains Mono"
   };
 
   return (
     <div>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      </style>
+
       <nav style={navbar}>
         {isMobile && (
           <button style={hamburgerBtn} onClick={() => setMenuOpen(!menuOpen)}>

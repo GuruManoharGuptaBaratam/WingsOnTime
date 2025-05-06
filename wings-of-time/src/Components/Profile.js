@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 export default function ProfileI() {
     const userInfoStyle = {
         position: 'absolute',
-        top: '20px',
+        top: '25px',
         right: '30px',
         display: 'flex',
         alignItems: 'center',
         color: '#000',
         fontWeight: 600,
         fontSize: '14px',
+        fontFamily: "JetBrains Mono"
       };
     
       const userIconStyle = {

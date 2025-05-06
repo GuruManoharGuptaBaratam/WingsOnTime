@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Background from '../Components/Background';
 import NavBar from '../Components/NavBar';
 import Profile from '../Components/Profile';
+import { Link } from 'react-router-dom';
 
 function Home() {
+  const [check,setCheck] = useState(false)
+  const [PNR,setPNR] = useState(null)
+  const [search,setSearch] = useState("")
+  function handleSubmit(){
+  if (check && PNR){
+    setSearch("/Search")
+  }
+  else{
+    alert('Fill all the details')
+  }
+}
   const styles = {
   
       wrapper: {
@@ -24,6 +36,7 @@ function Home() {
         color: '#000',
         fontWeight: 600,
         zIndex: 10,
+        fontFamily: "JetBrains Mono"
       },
     
       userCircle: {
@@ -48,20 +61,22 @@ function Home() {
       },
     
       input: {
-        fontSize: '1.2rem',
-        padding: '1rem',
+        fontSize: '1.4rem',
+        padding: '1.5rem',
         width: '100%',
         borderRadius: '50px',
-        border: '3px solid rgba(73, 197, 255, 0.26)',
+        border: '3px solid rgba(1, 175, 255, 0.41)',
         outline: 'none',
         textAlign: 'center',
         marginBottom: '20px',
+        fontFamily: "JetBrains Mono"
       },
     
       checkbox: {
         margin: '20px 0',
         fontSize: '14px',
         color: '#222',
+        fontFamily: "JetBrains Mono"
       },
     
       submitBtn: {
@@ -71,15 +86,20 @@ function Home() {
         borderRadius: '12px',
         border: 'none',
         cursor: 'pointer',
-        fontWeight: 'bold',
+        fontWeight: 'semiBold',
+        fontFamily: "JetBrains Mono"
       },
     };
 
   return (
     <div style={styles.wrapper}>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      </style>
+
       <Background/>
       <div className='Navbar'>
-      <NavBar/>
+      <NavBar />
       </div>
       
 
@@ -91,12 +111,13 @@ function Home() {
           type="text"
           placeholder="Enter Your Ticket ID or PNR Number"
           style={styles.input}
+          onChange = {(e)=>setPNR(e.target.value)}
         />
         <div style={styles.checkbox}>
-          <input type="checkbox" id="confirm" />
+          <input type="checkbox" id="confirm" onClick={()=>{setCheck((prev)=>!prev)}}/>
           <label htmlFor="confirm"> To Confirm and save your Ticket ID</label>
         </div>
-        <button style={styles.submitBtn}>Submit ID</button>
+        <Link to={search}><button style={styles.submitBtn} onClick={handleSubmit}>Submit ID</button></Link>
       </div>
     </div>
   );

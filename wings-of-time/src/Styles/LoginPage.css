@@ -35,6 +35,7 @@
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    font-style: "JetBrains Mono";
   }
   
  
@@ -47,18 +48,21 @@
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     z-index: 1;
+    font-family: "JetBrains Mono"
   }
  
   .login-container h1 {
     font-size: 40px; 
     font-weight: bold;
     margin-bottom: 40px;
+    font-family: "JetBrains Mono"
   }
   
 
   .input-box {
     position: relative;
     margin-bottom: 25px;
+  
   }
   
   .input-box input {
@@ -67,15 +71,16 @@
     font-size: 18px; 
     border-radius: 10px;
     border: 1px solid #ccc;
+    font-family: "JetBrains Mono"
   }
   
 
   .icon {
     position: absolute;
-    left: 15px;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 22px;
+    font-size: 38px;
   }
   
   
@@ -87,6 +92,7 @@
     cursor: pointer;
     font-size: 14px; 
     font-weight: bold;
+    font-family: "JetBrains Mono"
   }
   
 
@@ -100,6 +106,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    
   }
   
   .signup-btn,
@@ -114,6 +121,7 @@
     font-weight: bold;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
+    font-family: "JetBrains Mono"
   }
   
   .signup-btn:hover,
